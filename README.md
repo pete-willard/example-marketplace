@@ -37,5 +37,5 @@ Run the full pipeline:
 Or delegate an analysis question directly to the statistician subagent:
 
 ```
-@swapi-plugin:sw-statistician what are the 5 heaviest starships?
+@swapi-plugin:sw-statistician (agent) tell me which 5 starships have the largest crew
 ```
