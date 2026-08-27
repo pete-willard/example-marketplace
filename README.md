@@ -13,13 +13,15 @@ An example [Claude Code plugin marketplace](https://code.claude.com/docs/en/plug
 From inside Claude Code:
 
 ```bash
-/plugin marketplace add pete-willard/example-marketplace && /plugin install swapi-plugin@example-marketplace
+/plugin marketplace add pete-willard/example-marketplace
+/plugin install swapi-plugin@example-marketplace
 ```
 
 Or from a shell:
 
 ```bash
-claude plugin marketplace add pete-willard/example-marketplace && claude plugin install swapi-plugin@example-marketplace
+claude plugin marketplace add pete-willard/example-marketplace
+claude plugin install swapi-plugin@example-marketplace
 ```
 
 Add `-y` to the `install` command if running non-interactively (no TTY) to skip the confirmation prompt.
