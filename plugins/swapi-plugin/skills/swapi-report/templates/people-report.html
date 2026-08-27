@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SWAPI Report - People</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Helvetica, Arial, sans-serif; background: #14161a; color: #e8e6e3; margin: 2rem; }
+  h1 { font-weight: 600; }
+  .meta { color: #9a9a9a; margin-bottom: 1.5rem; font-size: 0.9rem; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: left; padding: 0.5rem 0.9rem; border-bottom: 1px solid #2a2d33; }
+  th { color: #f4c94c; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  tr:hover td { background: #1c1f24; }
+  .unknown { color: #6b6f76; font-style: italic; }
+</style>
+</head>
+<body>
+<h1>Star Wars People</h1>
+<p class="meta">{{row_count}} rows - source: swapi.info/api/people</p>
+<table>
+  <thead>
+<!-- HEADER_START -->
+    <tr><th>Name</th><th>Height (cm)</th><th>Mass (kg)</th><th>Birth Year</th><th>Gender</th><th>Homeworld</th></tr>
+<!-- HEADER_END -->
+  </thead>
+  <tbody>
+<!-- ROW_START -->
+    <tr><td>{{name}}</td><td>{{height}}</td><td>{{mass}}</td><td>{{birth_year}}</td><td>{{gender}}</td><td>{{homeworld_name}}</td></tr>
+<!-- ROW_END -->
+  </tbody>
+</table>
+</body>
+</html>

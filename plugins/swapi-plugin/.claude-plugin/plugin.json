@@ -1,0 +1,8 @@
+{
+  "name": "swapi-plugin",
+  "description": "Run the full Star Wars API demo pipeline - fetch a SWAPI.info resource, sort/filter it, and render an HTML report",
+  "version": "1.0.0",
+  "author": {
+    "name": "Pete Willard"
+  }
+}

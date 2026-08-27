@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SWAPI Report - Planets</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Helvetica, Arial, sans-serif; background: #14161a; color: #e8e6e3; margin: 2rem; }
+  h1 { font-weight: 600; }
+  .meta { color: #9a9a9a; margin-bottom: 1.5rem; font-size: 0.9rem; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: left; padding: 0.5rem 0.9rem; border-bottom: 1px solid #2a2d33; }
+  th { color: #7fc9f0; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  tr:hover td { background: #1c1f24; }
+</style>
+</head>
+<body>
+<h1>Star Wars Planets</h1>
+<p class="meta">{{row_count}} rows - source: swapi.info/api/planets</p>
+<table>
+  <thead>
+<!-- HEADER_START -->
+    <tr><th>Name</th><th>Climate</th><th>Terrain</th><th>Population</th><th>Diameter (km)</th></tr>
+<!-- HEADER_END -->
+  </thead>
+  <tbody>
+<!-- ROW_START -->
+    <tr><td>{{name}}</td><td>{{climate}}</td><td>{{terrain}}</td><td>{{population}}</td><td>{{diameter}}</td></tr>
+<!-- ROW_END -->
+  </tbody>
+</table>
+</body>
+</html>

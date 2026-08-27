@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SWAPI Report</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Helvetica, Arial, sans-serif; background: #14161a; color: #e8e6e3; margin: 2rem; }
+  h1 { font-weight: 600; }
+  .meta { color: #9a9a9a; margin-bottom: 1.5rem; font-size: 0.9rem; }
+  .row { border: 1px solid #2a2d33; border-radius: 6px; padding: 0.75rem 1rem; margin-bottom: 0.6rem; }
+  .row .name { font-weight: 600; color: #b7a4f0; }
+</style>
+</head>
+<body>
+<h1>Star Wars Data</h1>
+<p class="meta">{{row_count}} rows - no specific template for this entity type, showing name + url</p>
+<div class="rows">
+<!-- ROW_START -->
+  <div class="row"><span class="name">{{name}}</span><br><small>{{url}}</small></div>
+<!-- ROW_END -->
+</div>
+</body>
+</html>

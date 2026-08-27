@@ -1,0 +1,14 @@
+{
+  "name": "example-marketplace",
+  "owner": {
+    "name": "Pete Willard"
+  },
+  "description": "Example marketplace for QA skills",
+  "plugins": [
+    {
+      "name": "swapi-plugin",
+      "source": "./plugins/swapi-plugin",
+      "description": "Run the full Star Wars API demo pipeline - fetch a SWAPI.info resource, sort/filter it, and render an HTML report"
+    }
+  ]
+}
