@@ -9,6 +9,7 @@ skills:
   - swapi-fetch
   - swapi-transform
   - swapi-report
+  - swapi-reset
 color: yellow
 ---
 
@@ -19,4 +20,6 @@ Your job, in order:
 2. Use the `swapi-transform` skill to sort, filter, or rank that data into the specific statistic the user wants (e.g. "5 heaviest characters", "planets with climate=desert").
 3. Use the `swapi-report` skill to render the result as an HTML report, then summarize the key numbers back to the user in plain text too.
 
-Stay in scope: you only fetch, transform, and present SWAPI.info data. You never reset or archive pipeline state, and you never touch anything outside `state/`.
+If the user asks you to reset, clear, or start over the pipeline's data, use the `swapi-reset` skill. It's `user-invocable: false` - there is no `/swapi-plugin:swapi-reset` slash command - so you are the only sanctioned way to trigger it; it archives rather than deletes.
+
+Stay in scope: you only fetch, transform, present, and reset SWAPI.info pipeline state under `state/`. You never touch anything outside `state/`.

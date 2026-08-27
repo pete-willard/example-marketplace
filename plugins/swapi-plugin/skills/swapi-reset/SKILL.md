@@ -2,6 +2,7 @@
 name: swapi-reset
 description: Archive and clear the SWAPI pipeline's current run artifacts (state/01-raw.json, state/02-transformed*.json, state/03-report.html, state/pipeline-state.json) so the next swapi-fetch starts clean. Use when the user wants to reset, clear, start over, or wipe the previous SWAPI pipeline run before running it again.
 allowed-tools: Bash(${CLAUDE_PLUGIN_ROOT}/skills/swapi-reset/scripts/reset.sh:*) Read Write
+user-invocable: false
 ---
 
 ## What this skill does
@@ -18,4 +19,5 @@ Moves the current run's artifacts into a timestamped `state/archive/<timestamp>/
 ## Notes
 
 - This is a deliberate, single-purpose skill - it only resets, it doesn't fetch/transform/report anything itself.
+- `user-invocable: false` means this skill has no `/swapi-plugin:swapi-reset` slash command - it only runs when Claude (or an agent that preloads it, like `sw-statistician`) decides a reset is needed.
 - Old archives under `state/archive/` are never cleaned up automatically. If the user wants to actually discard an old archive, that's a separate, explicit request - don't do it as a side effect of running this skill.

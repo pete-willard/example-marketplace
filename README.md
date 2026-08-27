@@ -4,7 +4,9 @@ An example [Claude Code plugin marketplace](https://code.claude.com/docs/en/plug
 
 ## Plugins
 
-- **swapi-plugin** — runs the SWAPI.info Star Wars API demo pipeline end to end: fetch a resource collection, sort/filter it, and render it as a self-contained HTML report. Bundles five skills (`swapi`, `swapi-fetch`, `swapi-transform`, `swapi-report`, `swapi-reset`) that read/write pipeline state under `state/` in the current project, plus a `sw-statistician` subagent scoped to just the fetch/transform/report skills for data analysis and rankings.
+- **swapi-plugin** — runs the SWAPI.info Star Wars API demo pipeline end to end: fetch a resource collection, sort/filter it, and render it as a self-contained HTML report. Bundles five skills (`swapi`, `swapi-fetch`, `swapi-transform`, `swapi-report`, `swapi-reset`) that read/write pipeline state under `state/` in the current project, plus a `sw-statistician` subagent for data analysis and rankings.
+
+  `swapi-reset` is marked `user-invocable: false` — it has no slash command of its own. It only runs when Claude decides a reset is needed, or via `sw-statistician`, which preloads it as its sanctioned way to clear pipeline state.
 
 ## Usage
 
