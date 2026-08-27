@@ -8,12 +8,23 @@ An example [Claude Code plugin marketplace](https://code.claude.com/docs/en/plug
 
   `swapi-reset` is marked `user-invocable: false` — it has no slash command of its own. It only runs when Claude decides a reset is needed, or via `sw-statistician`, which preloads it as its sanctioned way to clear pipeline state.
 
-## Usage
+## How to install
+
+From inside Claude Code:
 
 ```bash
-/plugin marketplace add pete-willard/example-marketplace
-/plugin install swapi-plugin@example-marketplace
+/plugin marketplace add pete-willard/example-marketplace && /plugin install swapi-plugin@example-marketplace
 ```
+
+Or from a shell:
+
+```bash
+claude plugin marketplace add pete-willard/example-marketplace && claude plugin install swapi-plugin@example-marketplace
+```
+
+Add `-y` to the `install` command if running non-interactively (no TTY) to skip the confirmation prompt.
+
+## Usage
 
 Run the full pipeline:
 
